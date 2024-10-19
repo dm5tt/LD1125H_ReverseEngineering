@@ -7,7 +7,7 @@ It's main components consists of the
 - [SGRSemi SRK1101: Analog Radar 24GHz IC](http://sgrsemi.com/content/?1.html)
 - [GigaDevice GD32F303CET6: Clone of the STM32F303C](https://www.mouser.com/datasheet/2/870/GD32F303xx_Datasheet_Rev2_0-3134991.pdf)
 
-The GD32 creates the VCO ramp and receives the down-mixed difference signal  back into a ADC channel.
+The GD32 creates the VCO ramp using its DAC and receives the down-mixed echo signal back into a ADC channel.
 
 
 # PCB
