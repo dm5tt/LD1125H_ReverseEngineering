@@ -33,6 +33,8 @@ We have the entire pin configuration and maybe the entire HF specification.
 #### Entire Sequence
 ![Entire Radar Burst](./pictures/VCO_Ramp.png "Entire Radar Burst")
 
+The entire sequence jitters heavily.
+
 #### Bursts
 ![Ranging Bursts](./pictures/VCO_Ramp2.png "Ranging Bursts")
 
