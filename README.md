@@ -27,6 +27,6 @@ The GD32 creates the VCO ramp using its DAC and receives the down-mixed echo sig
 #### Bursts Detail
 ![Ranging Bursts Detail](./pictures/VCO_Ramp3.png "Ranging Burst Detail")
 
-### Echo Signal
+### Echo + Ramp Signal
 
 ![Echo Signal](./pictures/Echo_Signal.png "Echo Signal")
