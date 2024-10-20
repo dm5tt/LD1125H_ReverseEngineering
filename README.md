@@ -5,7 +5,7 @@ The LD1125H is a FMCW 24GHz radar manufactured by the Chinese company Hi-Link.
 It's main components consists of the 
 
 - SGRSemi SGR1101: Analog Radar 24GHz IC for RX/TX and down-mixing
-- [GigaDevice GD32F303CET6: Weird clone compatible to STM32F103 but as a Cortex M4](https://www.mouser.com/datasheet/2/870/GD32F303xx_Datasheet_Rev2_0-3134991.pdf)
+- [GigaDevice GD32F303CET6: CM4, 512k Flash, 64k RAM - not 100% compatible to its STM32 pendant](https://www.mouser.com/datasheet/2/870/GD32F303xx_Datasheet_Rev2_0-3134991.pdf)
 
 The GD32 creates the VCO ramp using its DAC and receives the down-mixed echo signal back into a ADC channel.
 
