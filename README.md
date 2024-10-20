@@ -10,11 +10,21 @@ It's main components consists of the
 The GD32 creates the VCO ramp using its DAC and receives the down-mixed echo signal back into a ADC channel.
 
 
+
+
 # PCB
 ![PCB Front](./pictures/pcb_front.jpg "PCB Front")
 ![PCB Back](./pictures/pcb_back.jpg "PCB Back")
 
-# Signals
+## Datasheets for the Radar IC
+
+There aren't much datasheets around for the Radar IC. But it seems to be purely analog with some downmixing and VCO functionality.
+
+These might be close to one we are looking for
+ - [SGRSemi SGR1101: Potential Datasheet I](http://sgrsemi.com/content/?1.html)
+ - [SGRSemi SGR1101: Picture from Google Picture Search](https://lh6.googleusercontent.com/proxy/r05ny95lglQSYcCXNK-Gk52xOgZKci5MrmbXd_QxigOGF_YEetxJZ7tkh6nnqJS0jW42gvE5VijN1pj6xdkLYNuQujEQeobe8bvLsVvaPjPO)
+
+## Signals
 
 ### VCO Ramp
 
