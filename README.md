@@ -19,10 +19,12 @@ There aren't much datasheets around for the Radar IC. But it seems to be purely 
 
 These might be close to one we are looking for:
 
- - [SGRSemi SGR1101: Potential Datasheet I](http://sgrsemi.com/content/?1.html)
- - [SGRSemi SGR1101: Picture from Google Picture Search](https://lh6.googleusercontent.com/proxy/r05ny95lglQSYcCXNK-Gk52xOgZKci5MrmbXd_QxigOGF_YEetxJZ7tkh6nnqJS0jW42gvE5VijN1pj6xdkLYNuQujEQeobe8bvLsVvaPjPO)
+ - [SGRSemi SGR1101: Link I](http://www.szxlckj.com/mobile/products_detail.php?id=494&cid=88&search_key=&page=1)
+ - [SGRSemi SGR1101: Link I](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi1mKlVE2QAdNAQR0M2IrDAUOuMLKeAaDKWQ&s)
 
 Also ham radio operator IK1ZYW played around with it [here](https://ik1zyw.blogspot.com/2023/09/enabling-prescaler-on-hlk-ld1115h-24.html)
+
+We have the entire pin configuration of the device but HF parameters lacking.
 
 ## Signals
 
