@@ -41,6 +41,64 @@ The entire sequence jitters heavily.
 #### Bursts Detail
 ![Ranging Bursts Detail](./pictures/VCO_Ramp3.png "Ranging Burst Detail")
 
-### Echo + Ramp Signal
+### Beat (Echo) + Ramp Signal
 
 ![Echo Signal](./pictures/Echo_Signal.png "Echo Signal")
+
+## Firmware
+
+Warning: I accidentally wiped the entire flash. Gonna dump the full firmware after getting a new device.
+
+
+With a ST-Link adapter OpenOCD and    [this](https://github.com/gd32-rs/gd32-openocd/blob/master/target/gd32f30x.cfg) configuration file the device can be accessed.
+
+### Connecting to the chip using OpenOCD
+
+```# openocd -f interface/stlink.cfg  -f  ~/gd32f30x.cfg -c "init; reset halt"```
+
+
+```
+> flash info 0
+#0 : stm32f1x at 0x08000000, size 0x00080000, buswidth 0, chipwidth 0
+        #  0: 0x00000000 (0x1000 4kB) not protected
+        #  1: 0x00001000 (0x1000 4kB) not protected
+        #  2: 0x00002000 (0x1000 4kB) not protected
+        #  3: 0x00003000 (0x1000 4kB) not protected
+        #  4: 0x00004000 (0x1000 4kB) not protected
+        #  5: 0x00005000 (0x1000 4kB) not protected
+        #  6: 0x00006000 (0x1000 4kB) not protected
+        #  7: 0x00007000 (0x1000 4kB) not protected
+        #  8: 0x00008000 (0x1000 4kB) not protected
+        #  9: 0x00009000 (0x1000 4kB) not protected
+        # 10: 0x0000a000 (0x1000 4kB) not protected
+        # 11: 0x0000b000 (0x1000 4kB) not protected
+        # 12: 0x0000c000 (0x1000 4kB) not protected
+        # 13: 0x0000d000 (0x1000 4kB) not protected
+        # 14: 0x0000e000 (0x1000 4kB) not protected
+        # 15: 0x0000f000 (0x1000 4kB) not protected
+        # 16: 0x00010000 (0x1000 4kB) not protected
+        # 17: 0x00011000 (0x1000 4kB) not protected
+        # 18: 0x00012000 (0x1000 4kB) not protected
+        # 19: 0x00013000 (0x1000 4kB) not protected
+        # 20: 0x00014000 (0x1000 4kB) not protected
+        # 21: 0x00015000 (0x1000 4kB) not protected
+        # 22: 0x00016000 (0x1000 4kB) not protected
+        # 23: 0x00017000 (0x1000 4kB) not protected
+        # 24: 0x00018000 (0x1000 4kB) not protected
+        # 25: 0x00019000 (0x1000 4kB) not protected
+        # 26: 0x0001a000 (0x1000 4kB) not protected
+        # 27: 0x0001b000 (0x1000 4kB) not protected
+        # 28: 0x0001c000 (0x1000 4kB) not protected
+        # 29: 0x0001d000 (0x1000 4kB) not protected
+        # 30: 0x0001e000 (0x1000 4kB) not protected
+        # 31: 0x0001f000 (0x61000 388kB) not protected
+STM32F10x (High Density) - Rev: unknown (0x2104)
+ ```
+
+### Dumping the Flash
+
+```
+> flash read_bank 0 /tmp/output.bin
+wrote 524288 bytes to file /tmp/output.bin from flash bank 0 at offset 0x00000000 in 3.247600s (157.655 KiB/s)
+```
+
