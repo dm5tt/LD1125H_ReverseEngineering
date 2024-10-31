@@ -125,7 +125,7 @@ Nothing Is protected. Jackpot!
 wrote 524288 bytes to file /home/had/ld1125h_dump.bin from flash bank 0 at offset 0x00000000 in 7.822686s (65.451 KiB/
 ```
 ```
-#sha256sum ld1125h_dump.bin 
+# sha256sum ld1125h_dump.bin 
 52a8a3401e2062a228d57d75a1d877d73e81beae9e8473564e7dbb5e94d9f138  ld1125h_dump.bin
 ```
 
