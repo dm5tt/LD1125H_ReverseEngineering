@@ -217,7 +217,6 @@ Following memory map seems to work
 
 ![Gihdra Memory Map](./pictures/ghdira_memory_map.png "Echo Signal")
 
-
-And after filling out function it starts talking to us.
+Voila. Almost clean assembler code. Even the Decompiler seems to do its job more (or less).
 
 ![Gihdra Disassembly](./pictures/ghdira_disassembly.png "Gihdra Disassembly")
