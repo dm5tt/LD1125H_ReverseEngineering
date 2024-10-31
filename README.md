@@ -211,7 +211,7 @@ get_uid
 
 ### Feeding it into Ghdira
 
-A fitting SVD for the SVD-Import plugin can be found the [gd32-rust website](https://gd32-rust.github.io/gd32-rs/gd32f303.svd.patched). After setting the base address to 0x080000 and the CPU type to CORTEX it worked out of the box.
+A fitting SVD for the SVD-Import plugin can be found the [gd32-rust website](https://gd32-rust.github.io/gd32-rs/gd32f303.svd.patched). After setting the base address to 0x08000000 and the CPU type to CORTEX it worked out of the box.
 
 Following memory map seems to work
 
