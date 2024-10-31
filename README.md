@@ -47,14 +47,35 @@ The entire sequence jitters heavily.
 
 ## Firmware
 
-Warning: I accidentally wiped the entire flash. Gonna dump the full firmware after getting a new device.
-
 
 With a ST-Link adapter OpenOCD and    [this](https://github.com/gd32-rs/gd32-openocd/blob/master/target/gd32f30x.cfg) configuration file the device can be accessed.
 
 ### Connecting to the chip using OpenOCD
 
-```# openocd -f interface/stlink.cfg  -f  ~/gd32f30x.cfg -c "init; reset halt"```
+```
+# openocd -f interface/stlink.cfg  -f  ~/gd32f30x.cfg -c "init; reset halt"
+
+openocd -f interface/stlink.cfg -f ~/Downloads/gd32f30x.cfg 
+Open On-Chip Debugger 0.12.0
+Licensed under GNU GPL v2
+For bug reports, read
+        http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+Info : DEPRECATED target event trace-config; use TPIU events {pre,post}-{enable,disable}
+Info : Listening on port 6666 for tcl connections
+Info : Listening on port 4444 for telnet connections
+Info : clock speed 1000 kHz
+Info : STLINK V2J23S0 (API v2) VID:PID 0483:3748
+Info : Target voltage: 2.936993
+Info : [gd32f3x.cpu] Cortex-M4 r0p1 processor detected
+Info : [gd32f3x.cpu] target has 6 breakpoints, 4 watchpoints
+Info : starting gdb server for gd32f3x.cpu on 3333
+Info : Listening on port 3333 for gdb connections
+Info : accepting 'telnet' connection on tcp/4444
+```
+
+Jackpot!
 
 
 ```
@@ -95,10 +116,108 @@ With a ST-Link adapter OpenOCD and    [this](https://github.com/gd32-rs/gd32-ope
 STM32F10x (High Density) - Rev: unknown (0x2104)
  ```
 
+Nothing Is protected. Jackpot!
+
 ### Dumping the Flash
 
 ```
-> flash read_bank 0 /tmp/output.bin
-wrote 524288 bytes to file /tmp/output.bin from flash bank 0 at offset 0x00000000 in 3.247600s (157.655 KiB/s)
+> flash read_bank 0 /home/had/ld1125h_dump.bin
+wrote 524288 bytes to file /home/had/ld1125h_dump.bin from flash bank 0 at offset 0x00000000 in 7.822686s (65.451 KiB/
+```
+```
+#sha256sum ld1125h_dump.bin 
+52a8a3401e2062a228d57d75a1d877d73e81beae9e8473564e7dbb5e94d9f138  ld1125h_dump.bin
 ```
 
+### Rough analysis of the dump
+
+```
+# strings ld1125h_dump.bin
+(sorted out the interesting bits)
+
+mov, dis=%.2f
+mov, dis=%.2f, str=%.2f
+occ, dis=%.2f
+occ, dis=%.2f, str=%.2f
+>v is %.2f km/h, mag is %.2f
+erase failed
+mov, dis=%.2f
+mov, dis=%.2f, str=%.2f
+occ, dis=%.2f
+occ, dis=%.2f, str=%.2f
+333@
+!XHP0
+occ raw data is ********************
+%.2f %.2f
+occ spectrum is ********************
+%.2f
+mov raw data is ********************
+%.2f %.2f
+mov spectrum is ********************
+all vars have been initialized and saved
+UID(hex) is:%08X-%08X-%08X
+rmax=
+rmax is %.2f
+rcoef=
+rcoef is %.4f
+mth1_mov=
+mth1_mov is %d
+mth2_mov=
+mth2_mov is %d
+mth3_mov=
+mth3_mov is %d
+mth1_movs=
+mth1_movs is %d
+mth2_movs=
+mth2_movs is %d
+mth3_movs=
+mth3_movs is %d
+mth1_occ=
+mth1_occ is %d
+mth2_occ=
+mth2_occ is %d
+mth3_occ=
+mth3_occ is %d
+eff_th=
+Beff_th is %d
+accu_num=
+accu_num is %d
+test_mode=
+test_mode is %d
+output_mode=
+output_mode is %d
+ts_on=
+ts_on is %d
+ts_mov=
+ts_mov is %d
+ts_occ=
+ts_occ is %d
+ts_off=
+ts_off is %d
+pt_10ms=
+ pt_10ms is %d
+save
+all vars have been saved
+RKB1125H BW1800M 20230412 V4.1
+get_all
+sgr_get_all
+initial
+all vars have been initialized
+data_obt=
+data_obt is %d
+vt is %d
+get_uid
+```
+
+### Feeding it into Ghdira
+
+A fitting SVD for the SVD-Import plugin can be found the [gd32-rust website](https://gd32-rust.github.io/gd32-rs/gd32f303.svd.patched). After setting the base address to 0x080000 and the CPU type to CORTEX it worked out of the box.
+
+Following memory map seems to work
+
+![Gihdra Memory Map](./pictures/ghdira_memory_map.png "Echo Signal")
+
+
+And after filling out function it starts talking to us.
+
+![Gihdra Disassembly](./pictures/ghdira_disassembly.png "Gihdra Disassembly")
