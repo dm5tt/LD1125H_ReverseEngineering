@@ -9,6 +9,8 @@ It's main components consists of the
 
 The GD32 creates the VCO ramp using its DAC and receives the down-mixed echo signal back into a ADC channel.
 
+For signal analysis the device does NOT offer full access to I/Q of the bang signal as only one of both is connected to the microcontroller.
+
 # PCB
 ![PCB Front](./pictures/pcb_front.jpg "PCB Front")
 ![PCB Back](./pictures/pcb_back.jpg "PCB Back")
@@ -220,3 +222,11 @@ Following memory map seems to work
 Voila. Almost clean assembler code. Even the Decompiler seems to do its job more (or less).
 
 ![Gihdra Disassembly](./pictures/ghdira_disassembly.png "Gihdra Disassembly")
+
+
+### Interesting findings
+
+USART0: Command and control interface (documented)
+
+USART3: Debug interface
+
