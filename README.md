@@ -42,7 +42,7 @@ The entire sequence jitters heavily.
 #### Bursts Detail
 ![Ranging Bursts Detail](./pictures/VCO_Ramp3.png "Ranging Burst Detail")
 
-### Beat (PA0) )+ Ramp Signal (PA4)
+### Beat (PA0) + Ramp Signal (PA4)
 
 ![Echo Signal](./pictures/Echo_Signal.png "Echo Signal")
 
