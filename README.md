@@ -14,7 +14,7 @@ For signal analysis the device does NOT offer full access to I/Q of the echo/ban
 # PCB
 ![PCB Front](./pictures/pcb_front.jpg "PCB Front")
 ![PCB Back](./pictures/pcb_back.jpg "PCB Back")
-
+![PCB Back without UC](./pictures/pcb_back_wo_uc.jpg "PCB Back without uC")
 ## Datasheets for the Radar IC
 
 There aren't much datasheets around for the Radar IC. But it seems to be purely analog with some downmixing and VCO functionality.
