@@ -29,7 +29,7 @@ Also ham radio operator IK1ZYW played around with it [here](https://ik1zyw.blogs
 
 ## Signals
 
-### VCO Ramp
+### VCO Ramp (PA4)
 
 #### Entire Sequence
 ![Entire Radar Burst](./pictures/VCO_Ramp.png "Entire Radar Burst")
@@ -42,12 +42,11 @@ The entire sequence jitters heavily.
 #### Bursts Detail
 ![Ranging Bursts Detail](./pictures/VCO_Ramp3.png "Ranging Burst Detail")
 
-### Beat (Echo) + Ramp Signal
+### Beat (PA0) )+ Ramp Signal (PA4)
 
 ![Echo Signal](./pictures/Echo_Signal.png "Echo Signal")
 
 ## Firmware
-
 
 With a ST-Link adapter OpenOCD and    [this](https://github.com/gd32-rs/gd32-openocd/blob/master/target/gd32f30x.cfg) configuration file the device can be accessed.
 
@@ -76,8 +75,7 @@ Info : Listening on port 3333 for gdb connections
 Info : accepting 'telnet' connection on tcp/4444
 ```
 
-Jackpot!
-
+Looks good.
 
 ```
 > flash info 0
@@ -94,17 +92,7 @@ Jackpot!
         #  9: 0x00009000 (0x1000 4kB) not protected
         # 10: 0x0000a000 (0x1000 4kB) not protected
         # 11: 0x0000b000 (0x1000 4kB) not protected
-        # 12: 0x0000c000 (0x1000 4kB) not protected
-        # 13: 0x0000d000 (0x1000 4kB) not protected
-        # 14: 0x0000e000 (0x1000 4kB) not protected
-        # 15: 0x0000f000 (0x1000 4kB) not protected
-        # 16: 0x00010000 (0x1000 4kB) not protected
-        # 17: 0x00011000 (0x1000 4kB) not protected
-        # 18: 0x00012000 (0x1000 4kB) not protected
-        # 19: 0x00013000 (0x1000 4kB) not protected
-        # 20: 0x00014000 (0x1000 4kB) not protected
-        # 21: 0x00015000 (0x1000 4kB) not protected
-        # 22: 0x00016000 (0x1000 4kB) not protected
+(...)
         # 23: 0x00017000 (0x1000 4kB) not protected
         # 24: 0x00018000 (0x1000 4kB) not protected
         # 25: 0x00019000 (0x1000 4kB) not protected
@@ -117,7 +105,7 @@ Jackpot!
 STM32F10x (High Density) - Rev: unknown (0x2104)
  ```
 
-Nothing Is protected. Jackpot!
+Nothing Is protected. Great.
 
 ### Dumping the Flash
 
