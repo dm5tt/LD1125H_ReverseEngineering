@@ -198,6 +198,8 @@ vt is %d
 get_uid
 ```
 
+There seem to be at least several undocumented serial commands (get_all, sgr_get_all, save, get_uid, etc.).
+
 ### Feeding it into Ghdira
 
 A fitting SVD for the SVD-Import plugin can be found the [gd32-rust website](https://gd32-rust.github.io/gd32-rs/gd32f303.svd.patched). After setting the base address to 0x08000000 and the CPU type to CORTEX it worked out of the box.
