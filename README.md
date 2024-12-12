@@ -234,7 +234,7 @@ UID(hex) is:35300D73-XXX-XXX
 Now the cool stuff.
 
 ```
-command: data_obt=1
+received message: data_obt=1
 
 mov spectrum is ********************
 25.37
@@ -246,6 +246,7 @@ mov spectrum is ********************
 (...)
 
 received message: data_obt=2
+
 data_obt is 2
 mov, dis=1.00
 occ, dis=1.50
