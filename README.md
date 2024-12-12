@@ -198,7 +198,9 @@ vt is %d
 get_uid
 ```
 
-These commands are pretty the same as described in their documentation.. but a few new ones.
+### Playing around with hidden serial commands
+
+These commands are pretty the same as described in their documentation.. but a few new ones are hidden.
 
 
 ```
