@@ -202,7 +202,6 @@ These commands are pretty the same as described in their documentation.. but a f
 
 
 ```
-
 received message: sgr_get_all
 rmax is 6.00
 rcoef is 0.0520
@@ -230,7 +229,34 @@ received message: get_uid
 UID(hex) is:35300D73-XXX-XXX
 ```
 
+Now the cool stuff.
 
+```
+command: data_obt=1
+
+mov spectrum is ********************
+25.37
+27.47
+31.54
+33.15
+29.94
+23.11
+(...)
+
+received message: data_obt=2
+data_obt is 2
+mov, dis=1.00
+occ, dis=1.50
+occ raw data is ********************
+2048.80 0.00
+2200.80 -0.00
+2337.20 0.00
+2380.20 0.00
+2276.00 -0.00
+2158.00 0.00
+2017.00 0.01
+(...)
+```
 
 
 ### Feeding it into Ghdira
