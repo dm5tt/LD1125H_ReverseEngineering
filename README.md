@@ -198,7 +198,40 @@ vt is %d
 get_uid
 ```
 
-There seem to be at least several undocumented serial commands (get_all, sgr_get_all, save, get_uid, etc.).
+These commands are pretty the same as described in their documentation.. but a few new ones.
+
+
+```
+
+received message: sgr_get_all
+rmax is 6.00
+rcoef is 0.0520
+mth1_mov is 80
+mth2_mov is 50
+mth3_mov is 20
+mth1_movs is 120
+mth2_movs is 60
+mth3_movs is 25
+mth1_occ is 60
+mth2_occ is 55
+mth3_occ is 20
+eff_th is 10
+accu_num is 6
+ts_mov is 60
+ts_occ is 60
+ts_off is 15
+pt_10ms is 20
+output_mode is 0
+test_mode is 0
+```
+
+```
+received message: get_uid
+UID(hex) is:35300D73-XXX-XXX
+```
+
+
+
 
 ### Feeding it into Ghdira
 
