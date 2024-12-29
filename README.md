@@ -9,7 +9,7 @@ The LD1125H is a FMCW 24GHz radar manufactured by the Chinese company Hi-Link.
 
 It's main components consists of the 
 
-- SGRSemi SGR1101: Analog Radar 24GHz IC for RX/TX and down-mixing
+- SGRSemi SRK1101: Analog Radar 24GHz IC for RX/TX and down-mixing
 - [GigaDevice GD32F303CET6: CM4, 512k Flash, 64k RAM - not 100% compatible to its STM32 pendant](https://www.mouser.com/datasheet/2/870/GD32F303xx_Datasheet_Rev2_0-3134991.pdf)
 
 The GD32 creates the VCO ramp using its DAC and receives the down-mixed echo signal back into a ADC channel.
@@ -26,8 +26,8 @@ There aren't much datasheets around for the Radar IC. But it seems to be purely 
 
 These might be close to one we are looking for:
 
- - [SGRSemi SGR1101: Link I](http://www.szxlckj.com/mobile/products_detail.php?id=494&cid=88&search_key=&page=1)
- - [SGRSemi SGR1101: Link II](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi1mKlVE2QAdNAQR0M2IrDAUOuMLKeAaDKWQ&s)
+ - [SGRSemi SRK1101: Link I](http://www.szxlckj.com/mobile/products_detail.php?id=494&cid=88&search_key=&page=1)
+ - [SGRSemi SRK1101: Link II](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi1mKlVE2QAdNAQR0M2IrDAUOuMLKeAaDKWQ&s)
 
 Also ham radio operator IK1ZYW played around with it [here](https://ik1zyw.blogspot.com/2023/09/enabling-prescaler-on-hlk-ld1115h-24.html). According to his research it's a clone of the  [Infineon BGT24LTR11N16](https://www.infineon.com/dgdl/Infineon-BGT24LTR11N16-DataSheet-v01_30-EN.pdf?fileId=5546d4625696ed7601569d2ae3a9158a). Very untypical for Infineon they are giving us a metry ton of very high quality datasheets and application notes on their [product website](https://www.infineon.com/cms/en/product/sensor/radar-sensors/radar-sensors-for-iot/24ghz-radar/bgt24ltr11n16/) without having us seeling our soul to a NDA.
 
