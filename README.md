@@ -14,7 +14,7 @@ It's main components consists of the
 
 The GD32 creates the VCO ramp using its DAC and receives the down-mixed echo signal back into a ADC channel.
 
-For signal analysis the device does NOT offer full access to I/Q of the echo/bang signal as only one of both is connected to the ADC of the microcontroller.
+For signal analysis the device does not offer full access to I/Q of the echo signal as only one of both is connected to the ADC of the microcontroller. Most likely we are seeing the I signal of the device and the Q must be calculated using a transformation (Hlbert?).
 
 # PCB
 ![PCB Front](./pictures/pcb_front.jpg "PCB Front")
@@ -289,4 +289,3 @@ The next steps will be to replace the firmware:
 * Spit out the ADC signal (How fast?)
 * Writing a basic Python application so I can play around with the signal
 
-I will not get too deep this application because not having separate  I/Q signals makes this board a dead end for the most radar applications.
