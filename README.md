@@ -60,7 +60,6 @@ With a ST-Link adapter OpenOCD and    [this](https://github.com/gd32-rs/gd32-ope
 ```
 # openocd -f interface/stlink.cfg  -f  ~/gd32f30x.cfg -c "init; reset halt"
 
-openocd -f interface/stlink.cfg -f ~/Downloads/gd32f30x.cfg 
 Open On-Chip Debugger 0.12.0
 Licensed under GNU GPL v2
 For bug reports, read
