@@ -18,7 +18,6 @@ For signal analysis the device does not offer full access to I/Q of the echo sig
 
 # PCB
 ![PCB Front](./pictures/pcb_front.jpg "PCB Front")
-![PCB Back](./pictures/pcb_back.jpg "PCB Back")
 ![PCB Back without UC](./pictures/pcb_back_wo_uc.jpg "PCB Back without uC")
 ## Datasheets for the Radar IC
 
