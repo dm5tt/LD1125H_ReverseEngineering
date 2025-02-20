@@ -271,14 +271,3 @@ Following memory map seems to work
 Voila. Almost clean assembler code. Even the Decompiler seems to do its job more (or less).
 
 ![Gihdra Disassembly](./pictures/ghdira_disassembly.png "Gihdra Disassembly")
-
-
-
-# Outlook 
-
-The next steps will be to replace the firmware:
-
-* Create the DAC signal on my own and maybe make it configurable using a simple TLV protocol
-* Spit out the ADC signal (How fast?)
-* Writing a basic Python application so I can play around with the signal
-
