@@ -1,8 +1,3 @@
-[!!! This repo was blog'ized and will not by updated anymore. !!!](https://www.dm5tt.de/2024/12/14/ld1125H-reverse-engineering/)
-
-
-
-
 # What is the LD1125H?
 
 The LD1125H is a FMCW 24GHz radar manufactured by the Chinese company Hi-Link.
